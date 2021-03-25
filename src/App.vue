@@ -16,6 +16,10 @@ v-app
           | {{ ", " }}
           a(href='google.com') Оперы
           | .
+        body-1.mt-8
+          a(href='https://terms.borodutch.com', target='_blank') Условия использования
+        body-1
+          a(href='https://privacy.borodutch.com', target='_blank') Политика конфиденциальности
 </template>
 
 <script lang="ts">

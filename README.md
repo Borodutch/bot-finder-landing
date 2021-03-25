@@ -1,18 +1,19 @@
-# Frontend code template
-
-This template to be used for frontend applications. Written in Vue.js with Vuetify and Vuex set up it is ready to be used. Facebook. Google and Telegram login is included.
+# Code for the [vc-bots.com](https://vc-bots.com) website.
 
 ## Project setup
+
 ```
 yarn install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
 yarn serve
 ```
 
 ### Compiles and minifies for production
+
 ```
 yarn build
 ```
