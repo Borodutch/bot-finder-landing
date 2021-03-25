@@ -20,13 +20,15 @@ v-app
           | .
         .text-body-1.mt-4
           | {{ "Скачать для " }}
-          a(target='_blank', href='google.com') Хрома
-          | {{ ", " }}
-          a(target='_blank', href='google.com') Фаерфокса
-          | {{ ", " }}
-          a(target='_blank', href='google.com') Сафари
-          | {{ ", " }}
-          a(target='_blank', href='google.com') Оперы
+          a(
+            target='_blank',
+            href='https://chrome.google.com/webstore/detail/fbjbccjcmmnegakmjkklplmijeilnbhd'
+          ) Хрома
+          | {{ " и " }}
+          a(
+            target='_blank',
+            href='https://addons.mozilla.org/en-US/firefox/addon/vc-is-this-a-bot/'
+          ) Фаерфокса
           | .
         .text-body-1.mt-8
           a(href='https://terms.borodutch.com', target='_blank') Условия использования
