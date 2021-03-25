@@ -1,60 +1,27 @@
 <template lang="pug">
-v-app(
-  :dark='$store.state.dark',
-  :class='$store.state.dark ? "grey darken-4" : "grey lighten-4"'
-)
-  cookie-law(
-    theme='blood-orange',
-    :buttonText='$t("cookieButton")',
-    :message='$t("cookieMessage")'
-  )
-  Navbar
-  Snackbar
+v-app
   v-main
-    router-view
+    .v-container.pa-4
+      v-layout.text-center(column, justify-center, align-center)
+        h1 VC Это бот?
+        subtitle-1 Простое расширение, которое позволяет быстро увидеть, бот ли пользователь в комментариях.
+        subtitle-1 Показывает важную информацию типа даты регистрации пользователя и количества комментариев.
+        body-1.mt-4
+          | {{ "Скачать для " }}
+          a(href='google.com') Хрома
+          | {{ ", " }}
+          a(href='google.com') Фаерфокса
+          | {{ ", " }}
+          a(href='google.com') Сафари
+          | {{ ", " }}
+          a(href='google.com') Оперы
+          | .
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import Navbar from '@/components/Navbar.vue'
-import Snackbar from '@/components/Snackbar.vue'
-import store from '@/store'
-import CookieLaw from 'vue-cookie-law'
-import { i18n } from '@/plugins/i18n'
 import Component from 'vue-class-component'
-import { namespace } from 'vuex-class'
 
-const AppStore = namespace('AppStore')
-const SnackbarStore = namespace('SnackbarStore')
-
-@Component({ components: { Navbar, CookieLaw, Snackbar } })
-export default class App extends Vue {
-  @AppStore.State dark!: boolean
-  @SnackbarStore.Mutation hideSnackbar!: () => void
-
-  get style() {
-    return {
-      'background-color': this.dark ? '#303030' : '#fafafa',
-    }
-  }
-
-  created() {
-    this.$vuetify.theme.dark = this.dark
-
-    const query = document.querySelector('meta[name="theme-color"]')
-    if (query) {
-      query.setAttribute('content', this.dark ? '#303030' : '#fafafa')
-    }
-
-    this.hideSnackbar()
-
-    document.title = i18n.t('title') as string
-  }
-
-  get metaInfo() {
-    return {
-      title: i18n.t('title') as string,
-    }
-  }
-}
+@Component
+export default class App extends Vue {}
 </script>
