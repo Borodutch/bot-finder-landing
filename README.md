@@ -1,4 +1,4 @@
-# Code for the [vc-bots.com](https://vc-bots.com) website.
+# Code for the [bot-finder.com](https://bot-finder.com) website.
 
 ## Project setup
 
