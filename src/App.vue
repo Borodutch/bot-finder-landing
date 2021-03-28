@@ -3,8 +3,8 @@ v-app
   v-main
     .v-container.pa-4
       v-layout.text-center(column, justify-center, align-center)
-        .text-h1 VC Это бот?
-        .text-subtitle-1 Простое расширение, которое позволяет быстро увидеть, бот ли пользователь в комментариях.
+        .text-h1 Это бот?
+        .text-subtitle-1 Простое расширение, которое позволяет быстро увидеть, бот ли пользователь в комментариях на vc.ru, TJournal и DTF.
         .text-subtitle-1 Показывает важную информацию типа даты регистрации пользователя и количества комментариев.
         .text-subtitle-1
           | {{ "Код расширения " }}
